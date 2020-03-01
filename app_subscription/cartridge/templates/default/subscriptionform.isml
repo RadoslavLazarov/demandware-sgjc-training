@@ -1,0 +1,41 @@
+<!--- TEMPLATENAME: subscriptionform.isml --->
+<isdecorate template="pt_subscription">
+<isinclude template="util/modules" />
+
+    <form action="${URLUtils.url('Subscription-HandleForm')}" method="post" id="${pdict.CurrentForms.subscriptionform.htmlName}">
+        <fieldset>
+            <div class="formfield">
+                <isinputfield formfield="${pdict.CurrentForms.subscriptionform.firstName}" type="input" />
+            </div>
+            <div class="formfield">
+                <isinputfield formfield="${pdict.CurrentForms.subscriptionform.lastName}" type="input" />
+            </div>
+            <div class="formfield">
+                <isinputfield formfield="${pdict.CurrentForms.subscriptionform.address}" type="input" />
+            </div>
+            <div class="formfield">
+                <isinputfield formfield="${pdict.CurrentForms.subscriptionform.email}" type="email" />
+            </div>
+            <div class="formfield">
+                <isinputfield formfield="${pdict.CurrentForms.subscriptionform.city}" type="input" />
+            </div>
+            <div class="formfield">
+                <isinputfield formfield="${pdict.CurrentForms.subscriptionform.country}" type="select" />
+            </div>
+            <div class="formfield">
+                <isinputfield formfield="${pdict.CurrentForms.subscriptionform.state}" type="select" />
+            </div>
+            <div class="formfield">
+                <isinputfield formfield="${pdict.CurrentForms.subscriptionform.phone}" type="input" />
+            </div>
+            <div class="formfield">
+                <isinputfield formfield="${pdict.CurrentForms.subscriptionform.agree}" type="checkbox" />
+            </div>
+            <div class="formactions">
+                <input type="submit" value="${Resource.msg('global.register', 'locale', null)}" name="${pdict.CurrentForms.subscriptionform.register.htmlName}" />
+            </div>
+        </fieldset>
+    </form>
+
+</isdecorate>
+<!--- TEMPLATENAME: subscriptionform.isml --->

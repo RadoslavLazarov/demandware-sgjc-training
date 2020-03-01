@@ -1,0 +1,55 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<isdecorate template="${pdict.decorator}">
+<isinclude template="util/modules"/>
+    <select id="sort-users" data-selected="${pdict.checkSortValue}">
+        <option value="" class="default-option" disabled selected>${Resource.msg('sort.sortby', 'subscription', null)}</option>
+        <option value="creationDate-asc">${Resource.msg('sort.date.asc', 'subscription', null)}</option>
+        <option value="creationDate-desc">${Resource.msg('sort.date.desc', 'subscription', null)}</option>
+        <option value="custom.email-asc">${Resource.msg('sort.email.asc', 'subscription', null)}</option>
+        <option value="custom.email-desc">${Resource.msg('sort.email.desc', 'subscription', null)}</option>
+        <option value="custom.firstName-asc">${Resource.msg('sort.firstname.asc', 'subscription', null)}</option>
+        <option value="custom.firstName-desc">${Resource.msg('sort.firstname.desc', 'subscription', null)}</option>
+        <option value="custom.lastName-asc">${Resource.msg('sort.lastname.asc', 'subscription', null)}</option>
+        <option value="custom.lastName-desc">${Resource.msg('sort.lastname.desc', 'subscription', null)}</option>
+        <option value="custom.address-asc">${Resource.msg('sort.address.asc', 'subscription', null)}</option>
+        <option value="custom.address-desc">${Resource.msg('sort.address.desc', 'subscription', null)}</option>
+        <option value="custom.city-asc">${Resource.msg('sort.city.asc', 'subscription', null)}</option>
+        <option value="custom.city-desc">${Resource.msg('sort.city.desc', 'subscription', null)}</option>
+        <option value="custom.country-asc">${Resource.msg('sort.country.asc', 'subscription', null)}</option>
+        <option value="custom.country-desc">${Resource.msg('sort.country.desc', 'subscription', null)}</option>
+        <option value="custom.state-asc">${Resource.msg('sort.state.asc', 'subscription', null)}</option>
+        <option value="custom.state-desc">${Resource.msg('sort.state.desc', 'subscription', null)}</option>
+        <option value="custom.phone-asc">${Resource.msg('sort.phone.asc', 'subscription', null)}</option>
+        <option value="custom.phone-desc">${Resource.msg('sort.phone.desc', 'subscription', null)}</option>
+    </select>
+    <table>
+        <thead>
+            <th>${Resource.msg('table.hide', 'subscription', null)}</th>
+            <th>${Resource.msg('table.email', 'subscription', null)}</th>
+            <th>${Resource.msg('table.creationdate', 'subscription', null)}</th>
+            <th>${Resource.msg('table.firstname', 'subscription', null)}</th>
+            <th>${Resource.msg('table.lastname', 'subscription', null)}</th>
+            <th>${Resource.msg('table.address', 'subscription', null)}</th>
+            <th>${Resource.msg('table.city', 'subscription', null)}</th>
+            <th>${Resource.msg('table.country', 'subscription', null)}</th>
+            <th>${Resource.msg('table.state', 'subscription', null)}</th>
+            <th>${Resource.msg('table.phone', 'subscription', null)}</th>
+        </thead>
+        <tbody>
+        <isloop items="${pdict.sortUsers}" var="user">
+            <tr class="toggle-border">
+                <td class="user-toggle-container"><input type="checkbox" class="user-toggle" /></td>
+                <td>${user.custom.email}</td>
+                <td>${user.creationDate}</td>
+                <td>${user.custom.firstName}</td>
+                <td>${user.custom.lastName}</td>
+                <td>${user.custom.address}</td>
+                <td>${user.custom.city}</td>
+                <td>${user.custom.country}</td>
+                <td>${user.custom.state}</td>
+                <td>${user.custom.phone}</td>
+            </tr>
+        </isloop>
+        </tbody>
+    </table>
+</isdecorate>

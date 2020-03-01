@@ -1,0 +1,8 @@
+<!--- TEMPLATENAME: subscriptionsuccess.isml --->
+<isdecorate template="${pdict.decorator}">
+    <isinclude template="util/modules" />
+
+        <h1>${Resource.msg('success.msg', 'subscription', null)}</h1>
+        <h1><a href="${URLUtils.url('Subscription-Users')}">${Resource.msg('success.button', 'subscription', null)}</a></h1>
+
+</isdecorate>

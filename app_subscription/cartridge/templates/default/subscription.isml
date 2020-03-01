@@ -1,0 +1,8 @@
+<iscontent type="text/html" charset="UTF-8" compact="true" />
+<isdecorate template="pt_subscription" />
+<isinclude template="util/modules" />
+
+<h1><a href="${URLUtils.url('Subscription-Register')}">${Resource.msg('page.register', 'subscription', null)}</a></h1>
+<h1><a href="${URLUtils.url('Subscription-Users')}">${Resource.msg('page.users', 'subscription', null)}</a></h1>
+
+</isdecorate>
