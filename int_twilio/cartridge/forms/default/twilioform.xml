@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<form>
+    <field formid="phone" label="contactus.phone.label" type="string" mandatory="true" binding="custom.phone" max-length="50" />
+	<action formid="subscribe" valid-form="true"/>
+</form>

@@ -1,0 +1,24 @@
+
+
+<isinclude template="util/modules" />
+
+<h1>${Resource.msg('page.send.sms', 'twilio', null)}:</h1>
+<isif condition="${pdict.customer !== null}">
+    <h3>${Resource.msg('page.address.book', 'twilio', null)}:</h3>
+    <select id="customer-phones">
+        <option value="">${Resource.msg('page.select', 'twilio', null)}...</option>
+        <isloop items="${pdict.customer}" var="user">
+            <option value="${user.phone}">${user.phone}</option>
+        </isloop>
+    </select>
+</isif>
+<form action="${URLUtils.url('Product-HandleForm')}" method="post" id="${pdict.CurrentForms.twilioform.htmlName}">
+    <fieldset>
+        <div class="formfield">
+            <isinputfield formfield="${pdict.CurrentForms.twilioform.phone}" type="input" />
+        </div>
+        <div class="formactions">
+            <input type="submit" value="${Resource.msg('contactus.sms.label', 'forms', null)}" name="${pdict.CurrentForms.twilioform.subscribe.htmlName}" />
+        </div>
+    </fieldset>
+</form>
